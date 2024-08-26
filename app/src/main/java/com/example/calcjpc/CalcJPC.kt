@@ -72,7 +72,7 @@ fun ButtonX(
                         }
                         if (valuex.equals("+") || valuex.equals("-") || valuex.equals("*") || valuex.equals(
                                 "/"
-                            ) || valuex.equals("%") || valuex.equals("x^y")
+                            ) || valuex.equals("%") || valuex.equals("x²")
                         ) {
                             onOpChange.invoke(valuex)
                             onOldValueChange.invoke(textState)
@@ -124,7 +124,7 @@ fun ButtonX(
                                     "-" -> {
                                         finalNumber = oldTextState.toDouble() - textState.toDouble()
                                     }
-                                    "x^y" -> {
+                                    "x²" -> {
                                         finalNumber = oldTextState.toDouble().pow(textState.toDouble())
                                     }
                                 }
